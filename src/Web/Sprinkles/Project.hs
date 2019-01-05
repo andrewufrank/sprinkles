@@ -119,7 +119,7 @@ isTemplateFile fp = do
 
 preloadTemplates :: Logger -> FilePath -> IO TemplateCache
 preloadTemplates logger dir = do
-    prefix <- makeAbsolute $ dir </> "templates"
+    prefix <- makeAbsolute $ dir </> "theme/templates"
     allFilenames <- findFilesR isTemplateFile prefix
     filenames <- findFiles isTemplateFile prefix
     templateSources <- forM allFilenames (readFile :: String -> IO String)

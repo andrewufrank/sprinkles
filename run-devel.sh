@@ -25,7 +25,7 @@ function watch_serve() {
             -e attrib \
             "$(which sprinkles)" \
             project.yml \
-            templates/** \
+            theme/templates/** \
             $(find -name static) \
             "$BASEDIR"/run-devel.sh
         sleep 1
